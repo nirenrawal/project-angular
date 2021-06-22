@@ -1,0 +1,22 @@
+<div class="planned_events">
+    <h1 id="planned-event">Planned events</h1>
+    
+    <div class="flexHeader">
+        <button class="btn btn-primary" routerLink="/neweditevent" id="newEventBtn">Create An Event</button>
+    </div>
+
+    <div class="flexGrid" id="search-field"> 
+        <mat-form-field>
+            <input matInput type="text" [(ngModel)]="search" placeholder="Search an event" />
+        </mat-form-field>
+        <mat-card class="example-card" *ngFor="let myevent of events | filterEvents: search"> 
+           <app-event [event]="myevent" (eventClicked)="editEvent($event)" (eventDeleted)= "deleteEvent($event)"></app-event>
+        </mat-card>
+    </div>
+</div>
+
+<!-- <div class="past_events">
+    <h1>Past events</h1>
+
+    <app-past-events></app-past-events>
+</div> -->

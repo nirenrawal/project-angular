@@ -1,0 +1,84 @@
+<h3 id="title">{{headerTitle}}</h3>
+
+<div class="row" id="new-event-form">
+  <div class="col-sm-8">
+
+      <div class="card-body">
+
+          
+          <form [formGroup]="eventForm" (ngSubmit)="onSubmitEvent()">
+              
+              <div class="form-group">
+                  <label class="form-label">Event Name</label>
+                  <input type="text" id="titleInput" class="form-control" formControlName="eventName"/>
+              </div>
+
+              <div class="form-group">
+                  <label class="form-label">Start Time</label>
+                  <input type="text" id="titleInput" class="form-control" formControlName="startTime"/>
+
+              </div>
+              <div class="form-group">
+                  <label class="form-label">End Time</label>
+                  <input type="text" id="titleInput" class="form-control" formControlName="endTime" />
+
+              </div>
+              <div class="form-group">
+                  <label class="form-label">Status </label>
+                  <input type="text" id="titleInput" class="form-control" formControlName="status" />
+
+              </div>
+              <div class="form-group">
+                  <label class="form-label">Location</label>
+                  <input type="text" id="titleInput" class="form-control" formControlName="location" />
+
+              </div>
+              <br>
+
+              <button class="btn btn-success" id="saveEvent" type="submit">Save</button>
+          </form>
+
+      </div>
+
+  </div>
+
+<!-- <form [formGroup]="eventForm" (ngSubmit)="onSubmitEvent()">
+  <p>
+    <mat-form-field appearance="legacy" class="example-full-width">
+      <mat-label>Event Name</mat-label>
+      <input matInput id="titleInput" placeholder="event name" formControlName="eventName">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy" class="example-full-width">
+      <mat-label>Start Time</mat-label>
+      <input matInput id="titleInput" placeholder="start time" formControlName="startTime">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy" class="example-full-width">
+      <mat-label>End Time</mat-label>
+      <input matInput id="titleInput" placeholder="end time" formControlName="endTime">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy" class="example-full-width">
+      <mat-label>Status</mat-label>
+      <input matInput id="titleInput" placeholder="status" formControlName="status">
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="legacy" class="example-full-width">
+      <mat-label>Location</mat-label>
+      <input matInput id="titleInput" placeholder="location" formControlName="location">
+    </mat-form-field>
+  </p>
+
+  <p> 
+    <button mat-raised-button id="saveEvent" color="primary">Save</button>
+  </p>
+</form> -->

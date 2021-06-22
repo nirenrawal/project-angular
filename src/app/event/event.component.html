@@ -1,0 +1,52 @@
+
+<table class="table table-striped">
+    <tr class="bg-info">
+        <th>Event Name</th>
+        <th>Created Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Location</th>
+        <th>Status</th>
+        <th></th>
+    </tr>
+
+    <tbody id="myTable">
+        <tr>
+            <td>{{event.eventName}}</td>
+            <td>{{event.createdDate | date: 'dd/MM/yyyy'}}</td>
+            <td>{{event.startTime }}</td>
+            <td>{{event.endTime }}</td>
+            <td>{{event.location }}</td>
+            <td>{{event.status }}</td>
+            <td>
+                <button id="event-btn"
+            (click)="editEvent(event.eventId)" class="btn btn-success btn-sm">Edit Event</button> 
+        
+            <button id="event-btn"
+            (click)="deleteEvent(event.eventId)" class="btn btn-danger btn-sm">Delete Event</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<!-- <mat-card-header>
+    <div class = "row">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-subtitle>{{event.eventName}}</mat-card-subtitle>
+        <mat-card-subtitle>{{event.createdDate | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+        <mat-card-subtitle>{{event.startTime }}</mat-card-subtitle>
+        <mat-card-subtitle>{{event.endTime }}</mat-card-subtitle>
+        <mat-card-subtitle>{{event.location }}</mat-card-subtitle>
+        <mat-card-subtitle>{{event.status }}</mat-card-subtitle>
+        <div><button 
+            (click)="editEvent(event.eventId)" class="btn btn-success btn-sm">Edit Event</button> 
+        
+            <button 
+            (click)="deleteEvent(event.eventId)" class="btn btn-danger btn-sm">Delete Event</button></div>      
+    </div>
+   
+</mat-card-header>
+<hr>
+ -->

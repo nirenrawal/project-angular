@@ -1,0 +1,8 @@
+1. UPDATE EVENT and DELETE EVENT in events.service.ts to make 
+    sure that we are performing changes on the database.
+
+2. Implement UPDATE and DELETE EVENT in EventActions.ts to perform 
+    changes on data that is gathered from the database.
+
+3. Style the components: event, events and neweditevent.
+
